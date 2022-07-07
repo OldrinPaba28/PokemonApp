@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block name="bootcamp.pokemonapp" template="Bootcamp_PokemonApp::index.phtml" ifconfig="pokemonapp/general/enable">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="parentComponent" xsi:type="array">
+                                <item name="component" xsi:type="string">Bootcamp_PokemonApp/js/parent-api</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="provider" xsi:type="string">parentComponent.childComponent</item>
+                                    <item name="template" xsi:type="string">Bootcamp_PokemonApp/person</item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+    
+            <referenceContainer name="header-wrapper" remove="true"/>
+            <referenceBlock name="navigation.sections" remove="true" />
+            <referenceContainer name="footer" remove="true" />  
+            <referenceContainer name="header.container" remove="true"/>
+            <referenceBlock name="header.panel.wrapper" remove="true" />
+            <referenceBlock name="copyright" remove="true" />
+            <referenceBlock name="form.subscribe" remove="true" />
+            <referenceBlock name="store_switcher" remove="true" />
+        </referenceContainer>
+    </body>
+</page>

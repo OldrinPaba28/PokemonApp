@@ -1,0 +1,15 @@
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<h1 class="titulo" data data-bind="i118n:">TODOS LOS POKEMONES</h1>
+<div class="pokemones" data-bind="foreach: pokemones">
+    <div class="pokemon">
+        <div class="pokeitem">
+            <img class = "pokeimg" data-bind="attr: {'src': img}"/>
+            <div class="pokename">
+                <p data-bind="text: name"></p>
+                <p data-bind="text: order"></p>
+            </div>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,25 @@
+<?php
+/** @var \Bootcamp\PokemonApp\Block\Template $block 
+ * @var \Magento\Framework\Escaper $escaper
+ */
+?>
+<div id="selector" data-bind="scope: 'parentapi'">
+    <!-- ko template: getTemplate() -->
+    <!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "#selector": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "parentapi": {
+                        "component": "Bootcamp_PokemonApp/js/child-api",
+                        "template": "Bootcamp_PokemonApp/person"
+                    }
+                }
+            }
+
+        }
+    }
+</script>
